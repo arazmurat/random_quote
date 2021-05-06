@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import ThemeContext from "./Context/ThemeContext";
 import AppTheme from "./Colors";
 import Toggle from "./Toggle";
-import Quotes from "./Quotes"
 
 const Main = () => {
   const theme = useContext(ThemeContext)[0];
@@ -10,14 +9,12 @@ const Main = () => {
   return (
     <main
       style={{
-        padding: "15rem",
+        padding: "10rem",
         backgroundColor: `${currentTheme.backgroundColor}`,
         color: `${currentTheme.textColor}`,
       }}
     >
       <Toggle />
-      <Quotes/>
-     
     </main>
   );
 };
