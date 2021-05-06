@@ -1,16 +1,16 @@
-import React, { useState } from "react";
-import ThemeContext from "./Context/ThemeContext";
-import Main from "./MainWithFunction";
+import React from "react";
+import ContextProvider from "./ColorContext";
+import WelcomeText from "./WelcomeText";
+import Button from "./Button";
 
 function App() {
-  const themeHook = useState("red");
-
   return (
-    <ThemeContext.Provider value={themeHook}>
-      <div>
-        <Main />
-      </div>
-    </ThemeContext.Provider>
+    <div style={{ width: "300px", height: "300px", margin: "0px auto" }}>
+      <ContextProvider>
+        <WelcomeText />
+        <Button />
+      </ContextProvider>
+    </div>
   );
 }
 
